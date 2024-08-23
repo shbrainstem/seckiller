@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  tomcat:
+    threadpool:
+      core-size: 200
+      max-size: 200
+      keep-alive-time: 5
+      queue-size: -1
+      rejected-execution-handler-class: org.apache.catalina.connector.AborPolicy
+      name-prefix: SecondKill-exec-
+spring:
+  application:
+    name: myboot
+  redis:
+    host: IP
+    port: PORT
+    password: "123456"
+  datasource:
+    url: jdbc:mysql://IP:PORT/db_name?useUnicode=true&characterEncodeing=utf8mb4
+    username: stem
+    password: stem123!
+    driver-class-name: com.mysql.jdbc.Driver
+
